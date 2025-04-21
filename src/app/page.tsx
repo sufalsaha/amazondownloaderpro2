@@ -1,5 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @typescript-eslint/no-unused-vars */
+
+"use client";
+
 import Image from "next/image";
 import logo from "@/static/logo/logo-W.svg";
 import hero1 from "@/static/image/slider-image1.png";
@@ -19,6 +22,10 @@ import { Daimon } from "@/static/component-icons/daimon";
 import { ReviewComponent } from "./component/review-section";
 import { ReviewSelider } from "./component/review-selider";
 import { AccordionDemo } from "./component/questions";
+import ContactUs from "./component/contact";
+import { SheetDemo } from "./component/mobile-nevber";
+import clsx from "clsx";
+import { usePathname } from "next/navigation";
 // import { AccordionDemo } from "./component/questions";
 
 // import App111 from "./selider/add";
@@ -37,74 +44,127 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export default function Home() {
+  const pathname = usePathname() || "";
   return (
     <div className={`${inter.className} bg-[#1F2328]`}>
       <div>
         <div className={`${inter.className} flex justify-center navgb`}>
           <div className="max-w-[1400px] w-full bg-[#272C31] rounded-[12px] mt-[30px] mx-[30px] ">
             <div className="px-[25px] py-[19px] ">
-              <nav className="w-full flex justify-center items-center relative  ">
+              <nav className="w-full flex justify-end lg:justify-center items-center relative  ">
                 <div className="absolute left-0">
                   <Image src={logo} alt="LOGO" className="w-[110px]  " />
                 </div>
-                <div className="flex justify-center items-center ">
-                  <div className="text-[15.3px] font-[500] leading-[32px] tracking-[0.5px] text-[#fff] flex justify-between items-center gap-[50px]  ">
-                    <Link href={"#"} className="px-[12px]  bg-amber-700 ">
+                <div className=" justify-center items-center hidden lg:flex ">
+                  <div className="text-[15.3px] font-[500] leading-[32px] tracking-[0.5px] text-[#fff] flex justify-between items-center gap-[30px]  ">
+                    <Link
+                      href={"/"}
+                      className={clsx(
+                        " px-[12px]  hover:bg-[#3E434A] rounded-[5px] ",
+                        {
+                          "bg-[#272C31]": pathname != "/",
+                          "bg-[#3E434A]": pathname == "/",
+                        }
+                      )}
+                    >
                       HOME
                     </Link>
-                    <Link href={"#"} className="px-[12px]  ">
+                    <Link
+                      href={"#"}
+                      className={clsx(
+                        " px-[12px]  hover:bg-[#3E434A] rounded-[5px] ",
+                        {
+                          "bg-[#272C31]": pathname != "#",
+                          "bg-[#3E434A]": pathname == "#",
+                        }
+                      )}
+                    >
                       PAGES
                     </Link>
-                    <Link href={"#"} className="px-[12px] ">
+                    <Link
+                      href={"#"}
+                      className={clsx(
+                        " px-[12px]  hover:bg-[#3E434A] rounded-[5px] ",
+                        {
+                          "bg-[#272C31]": pathname != "#",
+                          "bg-[#3E434A]": pathname == "#",
+                        }
+                      )}
+                    >
                       COURSES
                     </Link>
-                    <Link href={"#"} className="px-[12px]  ">
+                    <Link
+                      href={"#"}
+                      className={clsx(
+                        " px-[12px]  hover:bg-[#3E434A] rounded-[5px] ",
+                        {
+                          "bg-[#272C31]": pathname != "/#",
+                          "bg-[#3E434A]": pathname == "#",
+                        }
+                      )}
+                    >
                       PORTFOLO
                     </Link>
-                    <Link href={"#"} className="px-[12px]  ">
+                    <Link
+                      href={"#"}
+                      className={clsx(
+                        " px-[12px]  hover:bg-[#3E434A] rounded-[5px] ",
+                        {
+                          "bg-[#272C31]": pathname != "#",
+                          "bg-[#3E434A]": pathname == "#",
+                        }
+                      )}
+                    >
                       BLOG
                     </Link>
-                    <Link href={"#"} className="px-[12px] ">
+                    <Link
+                      href={"#"}
+                      className={clsx(
+                        " px-[12px]  hover:bg-[#3E434A] rounded-[5px] ",
+                        {
+                          "bg-[#272C31]": pathname != "/#",
+                          "bg-[#3E434A]": pathname == "#",
+                        }
+                      )}
+                    >
                       SHOP
                     </Link>
                   </div>
+                </div>
+                <div className="lg:hidden right-0 ">
+                  <SheetDemo />
                 </div>
               </nav>
             </div>
           </div>
         </div>
 
-        <section className="flex justify-center bg-[#1F2328] ">
+        {/* <section className="flex justify-center bg-[#1F2328] ">
           <div className=" w-full">
             <div className="mx-[40px] py-[20px] mt-[30px] ">
               <div className="w-full ">
-                {/* <HeroSlider /> */}
-                {/* <CustomSlider /> */}
                 <SyncedSwipersManual />
-
-                {/* <LinkedSwipers /> */}
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
-        <section className="flex justify-center bg-[#1F2328] ">
+        {/* <section className="flex justify-center bg-[#1F2328] ">
           <div className="max-w-[1400px]  w-full">
             <div className="mx-[40px] py-[20px] mt-[30px] ">
-              {/* <div className="w-full   "> */}
-              {/* <div className="text-[#f00]">
-                  <Image src={icon1} alt="LOGO" className="stroke-white " />
-                  aaaa
-                </div> */}
-              {/* <div className=" stroke-[#0edb59]  hover:stroke-[#ff6868]">
-                  <Icon className=" " />
-                  <Icon1 className=" " />
-                  <Icon2 className=" " />
-                  <Icon3 className=" " />
-                </div> */}
-              {/* </div> */}
               <div>
-                <div></div>
+                <div>
+                  <div className="flex justify-between items-center mb-[50px] ">
+                    <h2 className="text-[40px] font-[700] leading-[52px] text-[#fff] max-w-[552px] w-full ">
+                      No Hidden Charges. Pick Your Plan.
+                    </h2>
+                    <p className="text-[16px] font-[400] leading-[28px] text-[#fff] max-w-[513px] w-full ">
+                      Lorem ipsum dolor sit amet consectetur adipiscing elit.
+                      Mauris nullam the as integer quam dolor nunc semper.
+                      Ornare non nulla faucibus the pulvinar vulputate neque.
+                    </p>
+                  </div>
+                </div>
                 <div className="flex justify-center items-center gap-[20px]">
                   <div className="w-[305px] h-[360wpx] px-[35px] py-[40px] border-[2px] border-[#fff] rounded-[12px] group ">
                     <div className="w-[70px] h-[70px] bg-[#FFF4EB] flex justify-center items-center rounded-[5px] group-hover:bg-[#FF760E] group-hover:rounded-[70px] ">
@@ -202,9 +262,9 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
-        <section className="flex justify-center bg-[#1F2328] ">
+        {/* <section className="flex justify-center bg-[#1F2328] ">
           <div className="max-w-[1440px]  w-full">
             <div className="mx-[40px] py-[20px] mt-[30px] ">
               <div className="flex flex-col gap-[20px] mb-[50px] ">
@@ -219,13 +279,12 @@ export default function Home() {
               </div>
               <div className="">
                 <CuratedBlog />
-                {/* <Daimon className="fill-[#FF760E] group-hover:fill-[#fff] " /> */}
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
-        <section className="flex justify-center bg-[#1F2328] ">
+        {/* <section className="flex justify-center bg-[#1F2328] ">
           <div className="max-w-[1440px]  w-full">
             <div className="mx-[40px] py-[20px] mt-[30px] ">
               <div>
@@ -480,9 +539,9 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
-        <section className="flex justify-center bg-[#1F2328] ">
+        {/* <section className="flex justify-center bg-[#1F2328] ">
           <div className="max-w-[1440px] w-full">
             <div className="mx-[40px] py-[20px] mt-[30px] ">
               <div className="w-full ">
@@ -540,17 +599,87 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
-        <section className="flex justify-center bg-[#1F2328] ">
+        {/* <section className="flex justify-center bg-[#1F2328] ">
           <div className="max-w-[1440px] w-full">
-            <div className="mx-[40px] py-[20px] mt-[30px] ">
-              <div className="w-full ">
-                <AccordionDemo />
+            <div className="mx-[40px] py-[50px] mt-[30px] ">
+              <div className="w-full flex justify-center  gap-[30px] ">
+                <div className="w-1/2">
+                  <AccordionDemo />
+                </div>
+
+                <div className="w-1/2">
+                  <ContactUs />
+                </div>
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
+
+        {/* <section className="flex justify-center bg-[#22272B] ">
+          <div className="max-w-[1440px] w-full">
+            <div className="mx-[40px] py-[50px] mt-[30px] ">
+              <div className="w-full flex justify-center items-center gap-[30px]  ">
+                <div className="w-8/12  items-center">
+                  <div className="flex flex-col gap-[10px] ">
+                    <Image src={logo} alt="LOGO" className="w-[110px]  " />
+
+                    <p className="text-[15px] font-[400] leading-[15px] text-[#fff] ">
+                      Personal Blog Website
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex justify-between items-centerv w-full">
+                  <div className="flex flex-col gap-[10px] ">
+                    <div>
+                      <h4 className="text-[18px] font-[600] leading-[21px] text-[#fff] mb-[3px] ">
+                        Quick links
+                      </h4>
+                      <div className="h-[2px] w-[50px] bg-[#fff]   "></div>
+                    </div>
+                    <div className="text-[15px] font-[400] leading-[28px] text-[#fff]  flex flex-col gap-[10px] mt-[20px] ">
+                      <Link href={"#"}>About Us</Link>
+                      <Link href={"#"}>Cookie Policy</Link>
+                      <Link href={"#"}>Terms & Conditions</Link>
+                      <Link href={"#"}>Privacy Policy</Link>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col gap-[10px] ">
+                    <div>
+                      <h4 className="text-[18px] font-[600] leading-[21px] text-[#fff] mb-[3px] ">
+                        Follow Us
+                      </h4>
+                      <div className="h-[2px] w-[50px] bg-[#fff]   "></div>
+                    </div>
+                    <div className="text-[15px] font-[400] leading-[28px] text-[#fff]  flex flex-col gap-[10px] mt-[20px] ">
+                      <Link href={"#"}>Behance</Link>
+                      <Link href={"#"}>Dribbble</Link>
+                      <Link href={"#"}>Facebook</Link>
+                      <Link href={"#"}>Instagram</Link>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col gap-[10px] ">
+                    <div>
+                      <h4 className="text-[18px] font-[600] leading-[21px] text-[#fff] mb-[3px] ">
+                        Contact Info
+                      </h4>
+                      <div className="h-[2px] w-[50px] bg-[#fff]   "></div>
+                    </div>
+                    <div className="text-[15px] font-[400] leading-[28px] text-[#fff]  flex flex-col gap-[10px] mt-[20px] ">
+                      <Link href={"#"}>+49 241 241</Link>
+                      <Link href={"#"}>demo@rivaxstudio.com</Link>
+                      <Link href={"#"}>Dieter Wellhausen, D-11179 Berlin</Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section> */}
       </div>
     </div>
   );
