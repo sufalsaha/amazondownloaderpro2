@@ -134,7 +134,7 @@ export default function Home() {
             <div className="mx-[40px] py-[20px] mt-[80px] ">
               <div>
                 <div>
-                  <div className="flex flex-col lg:flex-row gap-[30px] lg:justify-between lg:items-center mb-[30px]  xl:mb-[0px] ">
+                  <div className="flex flex-col lg:flex-row gap-[30px] lg:justify-between lg:items-center mb-[45px]  ">
                     <h2 className="text-[28px] font-[700] leading-[36px] md:text-[34px] md:leading-[44px] lg:text-[40px] lg:leading-[52px] text-[#fff] lg:max-w-[552px] w-full ">
                       No Hidden Charges. Pick Your Plan.
                     </h2>
@@ -146,97 +146,105 @@ export default function Home() {
                   </div>
                 </div>
                 <div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  justify-center items-center gap-[20px] h-full">
-                    <div className=" px-[35px] py-[40px] border-[2px] border-[#fff] rounded-[12px] group ">
-                      <div className="w-[70px] h-[70px] bg-[#FFF4EB] flex justify-center items-center rounded-[5px] group-hover:bg-[#FF760E] group-hover:rounded-[70px] ">
-                        <Icon className="fill-[#FF760E] group-hover:fill-[#fff] " />
-                      </div>
-                      <h3
-                        className={`${inter.className} mt-[20px] text-[20px] font-[700] leading-[28px] text-[#fff]  `}
-                      >
-                        Core Features
-                      </h3>
-                      <p className="mt-[8px] mb-[20px] text-[16px] font-[400] leading-[28px] text-[#fff]">
-                        Lorem ipsum dolor consectetur at adipiscing elit. Mauris
-                        nullam integer quam dolor.
-                      </p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4  justify-center  gap-[20px] h-full">
+                    <div>
+                      <div className=" px-[35px] py-[40px] border-[2px] border-[#fff] rounded-[12px] group ">
+                        <div className="w-[70px] h-[70px] bg-[#FFF4EB] flex justify-center items-center rounded-[5px] group-hover:bg-[#FF760E] group-hover:rounded-[70px] ">
+                          <Icon className="fill-[#FF760E] group-hover:fill-[#fff] " />
+                        </div>
+                        <h3
+                          className={`${inter.className} mt-[20px] text-[20px] font-[500] leading-[28px] text-[#fff]  `}
+                        >
+                          Core Features
+                        </h3>
+                        <p className="mt-[8px] mb-[20px] text-[16px] font-[400] leading-[28px] text-[#fff]">
+                          Lorem ipsum dolor consectetur at adipiscing elit.
+                          Mauris nullam integer quam dolor.
+                        </p>
 
-                      <div>
-                        <button className="text-[15px] font-[600] leading-[28px] text-[#7D51F8] px-[30px] py-[12px] rounded-[30px] bg-[#F7F4FF] flex justify-center items-center gap-[8px] hover:bg-[#7D51F8] hover:text-[#fff] group/button">
-                          Read More
-                          <span>
-                            <ArrowRight className="size-5 font-[900] hidden  group-hover/button:block" />
-                          </span>
-                        </button>
+                        <div>
+                          <button className="text-[15px] font-[600] leading-[28px] text-[#7D51F8] px-[30px] py-[12px] rounded-[30px] bg-[#F7F4FF] flex justify-center items-center gap-[8px] hover:bg-[#7D51F8] hover:text-[#fff] group/button">
+                            Read More
+                            <span>
+                              <ArrowRight className="size-5 font-[900] hidden  group-hover/button:block" />
+                            </span>
+                          </button>
+                        </div>
                       </div>
                     </div>
-                    <div className=" px-[35px] py-[40px] border-[2px] border-[#fff] rounded-[12px] group xl:mt-[150px]">
-                      <div className="w-[70px] h-[70px] bg-[#FFF4EB] flex justify-center items-center rounded-[5px] group-hover:bg-[#FF760E] group-hover:rounded-[70px] ">
-                        <Icon1 className="fill-[#FF760E] group-hover:fill-[#fff] " />
-                      </div>
-                      <h3
-                        className={`${inter.className} mt-[20px] text-[20px] font-[700] leading-[28px] text-[#fff]  `}
-                      >
-                        Core Features
-                      </h3>
-                      <p className="mt-[8px] mb-[20px] text-[16px] font-[400] leading-[28px] text-[#fff]">
-                        Lorem ipsum dolor consectetur at adipiscing elit. Mauris
-                        nullam integer quam dolor.
-                      </p>
+                    <div className="xl:pt-[90px]">
+                      <div className=" px-[35px] py-[40px] border-[2px] border-[#fff] rounded-[12px] group ">
+                        <div className="w-[70px] h-[70px] bg-[#FFF4EB] flex justify-center items-center rounded-[5px] group-hover:bg-[#FF760E] group-hover:rounded-[70px] ">
+                          <Icon1 className="fill-[#FF760E] group-hover:fill-[#fff] " />
+                        </div>
+                        <h3
+                          className={`${inter.className} mt-[20px] text-[20px] font-[500] leading-[28px] text-[#fff]  `}
+                        >
+                          Core Features
+                        </h3>
+                        <p className="mt-[8px] mb-[20px] text-[16px] font-[400] leading-[28px] text-[#fff]">
+                          Lorem ipsum dolor consectetur at adipiscing elit.
+                          Mauris nullam integer quam dolor.
+                        </p>
 
-                      <div>
-                        <button className="text-[15px] font-[600] leading-[28px] text-[#7D51F8] px-[30px] py-[12px] rounded-[30px] bg-[#F7F4FF] flex justify-center items-center gap-[8px] hover:bg-[#7D51F8] hover:text-[#fff] group/button">
-                          Read More
-                          <span>
-                            <ArrowRight className="size-5 font-[900] hidden  group-hover/button:block" />
-                          </span>
-                        </button>
+                        <div>
+                          <button className="text-[15px] font-[600] leading-[28px] text-[#7D51F8] px-[30px] py-[12px] rounded-[30px] bg-[#F7F4FF] flex justify-center items-center gap-[8px] hover:bg-[#7D51F8] hover:text-[#fff] group/button">
+                            Read More
+                            <span>
+                              <ArrowRight className="size-5 font-[900] hidden  group-hover/button:block" />
+                            </span>
+                          </button>
+                        </div>
                       </div>
                     </div>
-                    <div className=" px-[35px] py-[40px] border-[2px] border-[#fff] rounded-[12px] group ">
-                      <div className="w-[70px] h-[70px] bg-[#FFF4EB] flex justify-center items-center rounded-[5px] group-hover:bg-[#FF760E] group-hover:rounded-[70px] ">
-                        <Icon2 className="fill-[#FF760E] group-hover:fill-[#fff] " />
-                      </div>
-                      <h3
-                        className={`${inter.className} mt-[20px] text-[20px] font-[700] leading-[28px] text-[#fff]  `}
-                      >
-                        Core Features
-                      </h3>
-                      <p className="mt-[8px] mb-[20px] text-[16px] font-[400] leading-[28px] text-[#fff]">
-                        Lorem ipsum dolor consectetur at adipiscing elit. Mauris
-                        nullam integer quam dolor.
-                      </p>
+                    <div>
+                      <div className=" px-[35px] py-[40px] border-[2px] border-[#fff] rounded-[12px] group ">
+                        <div className="w-[70px] h-[70px] bg-[#FFF4EB] flex justify-center items-center rounded-[5px] group-hover:bg-[#FF760E] group-hover:rounded-[70px] ">
+                          <Icon2 className="fill-[#FF760E] group-hover:fill-[#fff] " />
+                        </div>
+                        <h3
+                          className={`${inter.className} mt-[20px] text-[20px] font-[500] leading-[28px] text-[#fff]  `}
+                        >
+                          Core Features
+                        </h3>
+                        <p className="mt-[8px] mb-[20px] text-[16px] font-[400] leading-[28px] text-[#fff]">
+                          Lorem ipsum dolor consectetur at adipiscing elit.
+                          Mauris nullam integer quam dolor.
+                        </p>
 
-                      <div>
-                        <button className="text-[15px] font-[600] leading-[28px] text-[#7D51F8] px-[30px] py-[12px] rounded-[30px] bg-[#F7F4FF] flex justify-center items-center gap-[8px] hover:bg-[#7D51F8] hover:text-[#fff] group/button">
-                          Read More
-                          <span>
-                            <ArrowRight className="size-5 font-[900] hidden  group-hover/button:block" />
-                          </span>
-                        </button>
+                        <div>
+                          <button className="text-[15px] font-[600] leading-[28px] text-[#7D51F8] px-[30px] py-[12px] rounded-[30px] bg-[#F7F4FF] flex justify-center items-center gap-[8px] hover:bg-[#7D51F8] hover:text-[#fff] group/button">
+                            Read More
+                            <span>
+                              <ArrowRight className="size-5 font-[900] hidden  group-hover/button:block" />
+                            </span>
+                          </button>
+                        </div>
                       </div>
                     </div>
-                    <div className=" px-[35px] py-[40px] border-[2px] border-[#fff] rounded-[12px] group xl:mt-[150px]">
-                      <div className="w-[70px] h-[70px] bg-[#FFF4EB] flex justify-center items-center rounded-[5px] group-hover:bg-[#FF760E] group-hover:rounded-[70px] ">
-                        <Icon3 className="fill-[#FF760E] group-hover:fill-[#fff] " />
-                      </div>
-                      <h3
-                        className={`${inter.className} mt-[20px] text-[20px] font-[700] leading-[28px] text-[#fff]  `}
-                      >
-                        Core Features
-                      </h3>
-                      <p className="mt-[8px] mb-[20px] text-[16px] font-[400] leading-[28px] text-[#fff]">
-                        Lorem ipsum dolor consectetur at adipiscing elit. Mauris
-                        nullam integer quam dolor.
-                      </p>
+                    <div className="xl:pt-[90px]">
+                      <div className=" px-[35px] py-[40px] border-[2px] border-[#fff] rounded-[12px] group ">
+                        <div className="w-[70px] h-[70px] bg-[#FFF4EB] flex justify-center items-center rounded-[5px] group-hover:bg-[#FF760E] group-hover:rounded-[70px] ">
+                          <Icon3 className="fill-[#FF760E] group-hover:fill-[#fff] " />
+                        </div>
+                        <h3
+                          className={`${inter.className} mt-[20px] text-[20px] font-[500] leading-[28px] text-[#fff]  `}
+                        >
+                          Core Features
+                        </h3>
+                        <p className="mt-[8px] mb-[20px] text-[16px] font-[400] leading-[28px] text-[#fff]">
+                          Lorem ipsum dolor consectetur at adipiscing elit.
+                          Mauris nullam integer quam dolor.
+                        </p>
 
-                      <div>
-                        <button className="text-[15px] font-[600] leading-[28px] text-[#7D51F8] px-[30px] py-[12px] rounded-[30px] bg-[#F7F4FF] flex justify-center items-center gap-[8px] hover:bg-[#7D51F8] hover:text-[#fff] group/button">
-                          Read More
-                          <span>
-                            <ArrowRight className="size-5 font-[900] hidden  group-hover/button:block" />
-                          </span>
-                        </button>
+                        <div>
+                          <button className="text-[15px] font-[600] leading-[28px] text-[#7D51F8] px-[30px] py-[12px] rounded-[30px] bg-[#F7F4FF] flex justify-center items-center gap-[8px] hover:bg-[#7D51F8] hover:text-[#fff] group/button">
+                            Read More
+                            <span>
+                              <ArrowRight className="size-5 font-[900] hidden  group-hover/button:block" />
+                            </span>
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -280,7 +288,7 @@ export default function Home() {
                     non nulla faucibus the pulvinar vulputate neque.
                   </p>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  justify-center gap-[24px] ">
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4  justify-center gap-[24px] ">
                   <div className="w-full h-[590px] px-[30px] pt-[50px] pb-[45px] bg-[#272C31] rounded-[5px] group hover:bg-[#f64040] transition-all duration-500  ">
                     <div>
                       <div className="relative">
@@ -308,7 +316,7 @@ export default function Home() {
                     </div>
 
                     <div className="w-full flex flex-col justify-center items-center mb-[20px] mt-[5px] ">
-                      <button className="text-[18px] font-[500] text-[#8C65F9] px-[30px] py-[14px] rounded-[43px] bg-[#F7F4FF] ">
+                      <button className="w-full text-[18px] font-[500] text-[#8C65F9] px-[30px] py-[14px] rounded-[43px] bg-[#F7F4FF]  ">
                         Purchase Now
                       </button>
                     </div>
@@ -367,7 +375,7 @@ export default function Home() {
                     </div>
 
                     <div className="w-full flex flex-col justify-center items-center mb-[20px] mt-[5px] ">
-                      <button className="text-[18px] font-[500] text-[#8C65F9] px-[30px] py-[14px] rounded-[43px] bg-[#F7F4FF] ">
+                      <button className="w-full text-[18px] font-[500] text-[#8C65F9] px-[30px] py-[14px] rounded-[43px] bg-[#F7F4FF] ">
                         Purchase Now
                       </button>
                     </div>
@@ -426,7 +434,7 @@ export default function Home() {
                     </div>
 
                     <div className="w-full flex flex-col justify-center items-center mb-[20px] mt-[5px] ">
-                      <button className="text-[18px] font-[500] text-[#8C65F9] px-[30px] py-[14px] rounded-[43px] bg-[#F7F4FF] ">
+                      <button className="w-full text-[18px] font-[500] text-[#8C65F9] px-[30px] py-[14px] rounded-[43px] bg-[#F7F4FF] ">
                         Purchase Now
                       </button>
                     </div>
@@ -485,7 +493,7 @@ export default function Home() {
                     </div>
 
                     <div className="w-full flex flex-col justify-center items-center mb-[20px] mt-[5px] ">
-                      <button className="text-[18px] font-[500] text-[#8C65F9] px-[30px] py-[14px] rounded-[43px] bg-[#F7F4FF] ">
+                      <button className="w-full text-[18px] font-[500] text-[#8C65F9] px-[30px] py-[14px] rounded-[43px] bg-[#F7F4FF] ">
                         Purchase Now
                       </button>
                     </div>

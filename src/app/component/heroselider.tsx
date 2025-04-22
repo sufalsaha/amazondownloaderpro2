@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+
 "use client";
 
 import { useRef } from "react";
@@ -42,9 +43,8 @@ const slides = [
 export default function SyncedSwipersManual() {
   const topSwiperRef = useRef<any>(null);
   const bottomSwiperRef = useRef<any>(null);
-  // const slides = [...Array(5)];
 
-  const isSyncing = useRef(false); // Prevents infinite loop
+  const isSyncing = useRef(false);
 
   const handleTopChange = () => {
     if (isSyncing.current) return;
@@ -130,7 +130,6 @@ export default function SyncedSwipersManual() {
         ))}
       </Swiper>
 
-      {/* Bottom Swiper (loop, 3 slides per view, swipe-to-sync) */}
       <div className="absolute left-1/2 -translate-x-1/2  bottom-[-50px] z-1 w-[300px]  md:w-full md:max-w-[400px] px-4">
         <Swiper
           onSwiper={(swiper) => (bottomSwiperRef.current = swiper)}
