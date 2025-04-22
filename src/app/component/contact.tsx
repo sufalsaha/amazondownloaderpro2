@@ -2,28 +2,19 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-// import Image from "next/image";
 import { Button } from "@/components/ui/button";
-// import contactHero from "@/static/image/contactimg.png";
-// import contactHeroxl from "@/static/image/contactxl.png";
 import {
   Form,
   FormControl,
-  //   FormDescription,
   FormField,
   FormItem,
-  //   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 
-// import arra1 from "@/static/icon/Frame.png";
 import { Inter } from "next/font/google";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-
 import { useForm } from "react-hook-form";
-// import Link from "next/link";
-// import ProjectMind from "../component/project-mind";
 
 const inter = Inter({
   weight: ["400", "500", "700", "800"],
@@ -61,13 +52,10 @@ export default function ContactUs() {
       email: "",
       phoneNumber: "",
       message: "",
-      //   chakbox: boolean,
     },
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
     console.log(values);
   }
 
@@ -96,9 +84,6 @@ export default function ContactUs() {
                   name="firstName"
                   render={({ field }) => (
                     <FormItem>
-                      {/* <FormLabel className="text-[#374151] dark:text-[#FFFFFF] text-[14px] font-medium leading-[20px]">
-                              First name
-                            </FormLabel> */}
                       <FormControl className="text-[#6B7280] text-[16px] font-normal leading-[24px] py-[10px] border-[#D1D5DB] rounded-[10px] ">
                         <Input placeholder="First name" {...field} />
                       </FormControl>
@@ -111,9 +96,6 @@ export default function ContactUs() {
                   name="lastname"
                   render={({ field }) => (
                     <FormItem>
-                      {/* <FormLabel className="text-[#374151] text-[14px] font-medium leading-[20px]">
-                              Last name
-                            </FormLabel> */}
                       <FormControl className="text-[#6B7280] text-[16px] font-normal leading-[24px] py-[10px] border-[#D1D5DB] rounded-[10px] ">
                         <Input placeholder="Last name" {...field} />
                       </FormControl>
@@ -126,9 +108,6 @@ export default function ContactUs() {
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      {/* <FormLabel className="text-[#374151] dark:text-[#FFFFFF] text-[14px] font-medium leading-[20px]">
-                              Email
-                            </FormLabel> */}
                       <FormControl className="text-[#6B7280] text-[16px] font-normal leading-[24px] py-[10px] border-[#D1D5DB] rounded-[10px] ">
                         <Input
                           type="email"
@@ -145,15 +124,8 @@ export default function ContactUs() {
                   name="phoneNumber"
                   render={({ field }) => (
                     <FormItem>
-                      {/* <FormLabel className="text-[#374151] dark:text-[#FFFFFF] text-[14px] font-medium leading-[20px]">
-                              Email
-                            </FormLabel> */}
                       <FormControl className="text-[#6B7280] text-[16px] font-normal leading-[24px] py-[10px] border-[#D1D5DB] rounded-[10px] ">
-                        <Input
-                          //   type="phoneNumber"
-                          placeholder="phoneNumber"
-                          {...field}
-                        />
+                        <Input placeholder="phoneNumber" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -165,16 +137,13 @@ export default function ContactUs() {
                   name="message"
                   render={({ field }) => (
                     <FormItem>
-                      {/* <FormLabel className="text-[#374151] dark:text-[#FFFFFF] text-[14px] font-medium leading-[20px]">
-                              Message
-                            </FormLabel> */}
                       <FormControl className="text-[#6B7280] text-[16px] font-normal leading-[24px] py-[10px] border-[#D1D5DB] rounded-[10px] ">
                         <Textarea
                           placeholder="Type your message here."
                           {...field}
                         />
                       </FormControl>
-                      {/* <p className="text-[#6B7280] text-[14px] font-normal leading-[20px]"> Helper text</p> */}
+
                       <FormMessage />
                     </FormItem>
                   )}
@@ -182,14 +151,9 @@ export default function ContactUs() {
 
                 <Button
                   type="submit"
-                  className="w-full px-[18px] py-[10px] bg-[#0072DE] text-[#FFFFFF] text-[16px] font-medium leading-[24px] hover:bg-primary-none "
+                  className="w-full px-[18px] py-[25px] bg-[#FF5671] text-[#FFFFFF] text-[20px] font-medium leading-[24px] hover:bg-primary-none "
                 >
                   Send message
-                  {/* <Image
-                        //   src={arra1}
-                          alt="arra1 "
-                          className="w-[24px] h-[24px] "
-                        /> */}
                 </Button>
               </form>
             </Form>

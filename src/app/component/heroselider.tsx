@@ -79,16 +79,21 @@ export default function SyncedSwipersManual() {
   };
 
   return (
-    <div className="relative w-full h-[700px] bg-black rounded-[12px]">
-      {/* Top Swiper (autoplay, loop, 1 slide per view) */}
+    <div className="relative w-full xl:h-[700px] md:h-[400px] h-[350px] bg-black rounded-[12px]">
       <Swiper
         modules={[Autoplay, Pagination, EffectFade]}
         effect={"fade"}
         onSwiper={(swiper) => (topSwiperRef.current = swiper)}
         onSlideChange={handleTopChange}
         pagination={{ clickable: true }}
-        // spaceBetween={30}
-
+        breakpoints={{
+          0: {
+            pagination: false,
+          },
+          600: {
+            pagination: { clickable: true },
+          },
+        }}
         loop={true}
         autoplay={{
           delay: 3000,
@@ -96,12 +101,12 @@ export default function SyncedSwipersManual() {
         }}
         slidesPerView={1}
         spaceBetween={10}
-        className="w-full h-full rounded-[12px]"
+        className="w-full h-full rounded-[12px] "
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index} className="">
             <div
-              className="relative w-full h-full bg-center bg-cover flex items-center justify-center rounded-[12px]"
+              className="relative w-full h-full  bg-center bg-cover flex items-center justify-center rounded-[12px]"
               style={{ backgroundImage: `url(${slide.image})` }}
             >
               <div className="absolute inset-0 bg-black/50 z-10" />
@@ -113,10 +118,10 @@ export default function SyncedSwipersManual() {
                     </span>
                   ))}
                 </div>
-                <h2 className="text-3xl md:text-5xl font-bold mb-4">
+                <h2 className="text-[22px] font-[600] md:text-[36px] mb-4">
                   {slide.title}
                 </h2>
-                <p className="text-sm font-medium">
+                <p className="text-[12px] font-medium">
                   By {slide.author} &nbsp;—&nbsp; {slide.date}
                 </p>
               </div>
@@ -126,7 +131,7 @@ export default function SyncedSwipersManual() {
       </Swiper>
 
       {/* Bottom Swiper (loop, 3 slides per view, swipe-to-sync) */}
-      <div className="absolute left-1/2 -translate-x-1/2  bottom-[-50px] z-1  w-full max-w-[400px] px-4">
+      <div className="absolute left-1/2 -translate-x-1/2  bottom-[-50px] z-1 w-[300px]  md:w-full md:max-w-[400px] px-4">
         <Swiper
           onSwiper={(swiper) => (bottomSwiperRef.current = swiper)}
           onSlideChange={handleBottomChange}

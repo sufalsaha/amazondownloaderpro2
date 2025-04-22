@@ -26,7 +26,7 @@ import {
   SidebarProvider,
 } from "@/components/ui/sidebar";
 
-import { ChevronDown } from "lucide-react";
+import { AlignJustify, ChevronDown } from "lucide-react";
 import { Inter } from "next/font/google";
 
 const inter = Inter({
@@ -38,16 +38,17 @@ export function SheetDemo() {
   const pathname = usePathname() || "";
   const [open, setOpen] = useState(false);
   return (
-    <div className={`${inter.className} bg-[#051222] flex justify-center  `}>
+    <div className={`${inter.className}  flex justify-center  `}>
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger asChild>
           <Link href={"#"}>
-            <div className="px-[4px] py-[4px] bg-[#ffffff14] rounded-[4px]">
-              <Image
+            <div className="px-[4px] py-[4px] rounded-[4px]">
+              <AlignJustify className="text-[#fff] size-[30px] " />
+              {/* <Image
                 src={manu}
                 alt={"Manu"}
                 className="w-[25px] h-[25px] xl:hidden "
-              />
+              /> */}
             </div>
           </Link>
         </SheetTrigger>
